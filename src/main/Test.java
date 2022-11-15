@@ -12,7 +12,7 @@ public class Test {
         Employee employee4 = new Employee(14, 25000, "BBB");
 
         List<Employee> list = Arrays.asList(employee1, employee2, employee3, employee4);
-
+        Collections.sort(list, new SalaryComparator());
        ListIterator listIterator = list.listIterator();
 
        while (listIterator.hasNext()){
