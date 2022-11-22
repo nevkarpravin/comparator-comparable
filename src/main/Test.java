@@ -12,7 +12,17 @@ public class Test {
         Employee employee4 = new Employee(14, 25000, "BBB");
 
         List<Employee> list = Arrays.asList(employee1, employee2, employee3, employee4);
-        Collections.sort(list, new SalaryComparator());
+        Comparator<Employee> comparator = (o1, o2) -> 0;
+        Collections.sort(list, comparator );
+
+        SampleFunctionalInterface addition = (num1, num2) -> num1 + num2;
+        SampleFunctionalInterface substraction = (num1, num2) -> num1 - num2;
+
+       int result =  addition.operation(15, 25);
+       int result1 = substraction.operation(25, 14);
+        System.out.println("Addition is :" + result);
+        System.out.println("substraction is :" + result1);
+
        ListIterator listIterator = list.listIterator();
 
        while (listIterator.hasNext()){
