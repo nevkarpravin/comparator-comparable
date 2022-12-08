@@ -8,6 +8,15 @@ public class Address implements Cloneable{
     private String streetName;
     private String city;
     private String state;
+    private int pinCode;
+
+    public int getPinCode() {
+        return pinCode;
+    }
+
+    public void setPinCode(int pinCode) {
+        this.pinCode = pinCode;
+    }
 
     public Address(String streetName, String city, String state) {
         this.streetName = streetName;
@@ -32,12 +41,15 @@ public class Address implements Cloneable{
         return (Address) super.clone();
     }
 
+
     @Override
     public String toString() {
         return "Address{" +
-                "streetName='" + streetName + '\'' +
+                "id=" + id +
+                ", streetName='" + streetName + '\'' +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
+                ", pinCode=" + pinCode +
                 '}';
     }
 
